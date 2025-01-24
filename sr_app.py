@@ -3,9 +3,9 @@ import streamlit as st
 import os
 import pickle
 import time
-import streamlit as st  # type: ignore
-from streamlit_option_menu import option_menu  # type: ignore
-from PIL import Image  # type: ignore
+import streamlit as st  
+from streamlit_option_menu import option_menu  
+from PIL import Image  
 import numpy as np
 import librosa
 import tensorflow as tf
