@@ -17,7 +17,8 @@ diabetes_model = pickle.load(open(f'{working_dir}/pr_1/saved_models/diabetes_mod
 heart_disease_model = pickle.load(open(f'{working_dir}/pr_1/saved_models/heart_disease_model.sav', 'rb'))
 parkinsons_model = pickle.load(open(f'{working_dir}/pr_1/saved_models/parkinsons_model.sav', 'rb'))
 cancer_model = pickle.load(open(f'{working_dir}/pr_1/saved_models/model.pkl', 'rb'))
-speech_model = tf.keras.models.load_model(r'pr_2\best_model.keras')
+speech_model_path = os.path.join("pr_2", "best_model.keras")
+speech_model = tf.keras.models.load_model(speech_model_path)
 
 # Emotion mapping dictionary
 emotion_mapping = {
