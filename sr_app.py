@@ -179,7 +179,7 @@ elif selected_project == "Health Assistant":
                     "Heart disease", "Stroke", "Kidney disease", "Eye problems", 
                     "Dental disease", "Nerve damage", "Foot problems"
                 ],
-                "image": "pr_1/static\img\diabetes.png"
+                "image": r"pr_1/static/img/diabetes.png"
             },
             "2. Heart Disease": {
                 "description": "Heart disease describes conditions affecting your heart.",
@@ -187,7 +187,7 @@ elif selected_project == "Health Assistant":
                     "Chest pain or discomfort", "Shortness of breath", "Pain in the legs or arms", 
                     "Pain in the neck, jaw, or back"
                 ],
-                "image": "pr_1/static/img/heart.png"
+                "image": r"pr_1/static/img/heart.png"
             },
             "3. Parkinson's Disease": {
                 "description": "Parkinson's disease is a progressive disorder of the nervous system.",
@@ -195,7 +195,7 @@ elif selected_project == "Health Assistant":
                     "Loss of balance", "Loss of speech", "Loss of movement", 
                     "Fatigue", "Difficulty concentrating"
                 ],
-                "image": "pr_1/static/img/brain-anatomy.webp"
+                "image": r"pr_1/static/img/brain-anatomy.webp"
             },
             "4. Breast Cancer": {
                 "description": "Breast cancer is cancer that develops from breast tissue.",
@@ -205,7 +205,7 @@ elif selected_project == "Health Assistant":
                     "Peeling, scaling, crusting or flaking of the skin around the nipple", 
                     "Redness or pitting of the skin over your breast"
                 ],
-                "image": "pr_1/static/img/breastcancer.jpg"
+                "image": r"pr_1/static/img/breastcancer.jpg"
             }
         }
 
@@ -342,7 +342,7 @@ elif selected_project == "Health Assistant":
     member_info = {
         "Harshil Ameta": {
             "role": "Lead Machine Learning Engineer",
-            "image": r"pr_1\static\img\avatar.png"
+            "image": r"pr_1/static/img/avatar.png"
         }
     }
 
@@ -377,7 +377,7 @@ elif selected_project == "Speech Recognizer":
     # Home Page
     if page == "Home":
         st.title("Speech Emotion Recognition (SER) Model")
-        st.image(r"pr_2\voice-recognition-technology-conceptual-image-39055870.webp", use_container_width =True)
+        st.image(r"pr_2/voice-recognition-technology-conceptual-image-39055870.webp", use_container_width =True)
         st.write("""
         Welcome to the **Speech Emotion Recognition (SER) Model Tester**!
 
@@ -426,14 +426,14 @@ elif selected_project == "Speech Recognizer":
         - TensorFlow
         - Librosa
 
-        **Developer:** Amogh Kapil, Meet Savsani, Akshar Dubey
+        **Developer:** Harshil Ameta
         """)
 
     # Data for team members
     member_info = {
         "Harshil Ameta": {
             "role": "Data Analyst and Scientist",
-            "image": r"pr_3\avatar.png"
+            "image": r"pr_3/avatar.png"
         }
     }
 
@@ -476,7 +476,7 @@ elif selected_project == "House Price Prediction":
 
         # Add an image (replace with your preferred image URL or local file)
         st.image(
-            r"pr_3\hsp_img.jpg",
+            r"pr_3/hsp_img.jpg",
             caption="Bangalore Real Estate",
             use_container_width=True,
         )
@@ -537,7 +537,7 @@ elif selected_project == "House Price Prediction":
     elif option == "Price Prediction System":
         # Add an image (replace with your preferred image URL or local file)
         st.image(
-            r"pr_3\bg_img.jpg",
+            r"pr_3/bg_img.jpg",
             caption="Bangalore Real Estate",
             use_container_width=True,
         )
@@ -584,7 +584,7 @@ elif selected_project == "House Price Prediction":
     member_info = {
         "Harshil Ameta": {
             "role": "Data Analyst and Scientist",
-            "image": r"pr_3\avatar.png"
+            "image": r"pr_3/avatar.png"
         }
     }
 
