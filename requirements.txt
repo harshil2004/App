@@ -1,8 +1,0 @@
-streamlit
-numpy
-pandas
-pickle
-PIL
-tensorflow
-keras
-scikit-learn
