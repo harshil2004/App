@@ -41,11 +41,11 @@ def preprocess_audio(audio_data):
 # Load location data and ML model
 @st.cache_resource
 def load_resources():
-    with open(r"pr_3\columns.json", "r") as f:  
+    with open(r"pr_3/columns.json", "r") as f:  
         data_columns = json.load(f)["data_columns"]
         locations = data_columns[3:]  
 
-    with open(r"pr_3\banglore_home_prices_model.pickle", "rb") as f:
+    with open(r"pr_3/banglore_home_prices_model.pickle", "rb") as f:
         model = pickle.load(f)
     return data_columns, locations, model
 
