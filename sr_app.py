@@ -11,6 +11,12 @@ import librosa
 import tensorflow as tf
 from streamlit_webrtc import webrtc_streamer, AudioProcessorBase, WebRtcMode
 import streamlit.runtime.scriptrunner as scriptrunner
+import importlib.util
+import os
+sremo_path = os.path.join(os.path.dirname(__file__), 'pr_4', 'sremo.py')
+spec = importlib.util.spec_from_file_location("sremo", sremo_path)
+sremo = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(sremo)
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 diabetes_model = pickle.load(open(f'{working_dir}/pr_1/saved_models/diabetes_model.sav', 'rb'))
@@ -73,7 +79,7 @@ def get_estimated_price(location, sqft, bhk, bath):
 # Sidebar for Main Navigation
 with st.sidebar:
     st.title("My ML Projects")
-    selected_project = option_menu("Select Project", ["Home", "Health Assistant", "Speech Recognizer", "House Price Prediction"])
+    selected_project = option_menu("Select Project", ["Home", "Health Assistant", "Speech Recognizer", "House Price Prediction", "Emotion Detection"])
 
 # Function to update query parameters
 def update_query_params(project):
@@ -460,7 +466,6 @@ elif selected_project == "Speech Recognizer":
 elif selected_project == "House Price Prediction":
     st.title("House Price Prediction")
 
-    # Secondary Navigation
     with st.sidebar:
         option = option_menu('Price Prediction System',
                             ['Home',
@@ -606,3 +611,6 @@ elif selected_project == "House Price Prediction":
             with col1:  # Text appears when hovered over or clicked on
                 with st.expander(name):
                     st.write(info["role"])
+
+elif selected_project == 'Emotion Detection':
+    sremo.main()
