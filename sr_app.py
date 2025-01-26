@@ -127,5 +127,4 @@ elif selected_project == "House Price Prediction":
     homePricemain.main()
 
 elif selected_project == 'Emotion Detection':
-    pass
-    # sremo.main()
+    sremo.main()
