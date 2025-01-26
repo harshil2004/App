@@ -129,7 +129,7 @@ def main():
                     break
 
             cap.release()
-            cv2.destroyAllWindows()
+            # cv2.destroyAllWindows()
 
     elif option == "About Us":
         # About Us Page
